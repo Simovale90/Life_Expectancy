@@ -10,6 +10,11 @@ FROM
 WHERE
   table_name = 'LifeExpectancy'
 
+/* What years are taken into account and how many measurements do I have for each year? */ 
+  
+SELECT Year, COUNT(*) AS MeasurementCount FROM `sql-firt-test.datimiei.LifeExpectancy`
+GROUP BY Year
+
 /* Now let's try to answer the following questions.
 1) What is the average life expectancy at birth in Europe (hint: the numeric variable related to the MetricObserved dimension is called Numeric)? */
 
